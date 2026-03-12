@@ -11,10 +11,10 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor:Color(0xff2C2B34),
       body: Column(
         children: [
-         Text('fgfu') 
+        col
         ],
       ),
     );
