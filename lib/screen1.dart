@@ -14,7 +14,7 @@ class _Screen1State extends State<Screen1> {
       backgroundColor: Colors.amber,
       body: Column(
         children: [
-          
+         Text('fgfu') 
         ],
       ),
     );
