@@ -13,23 +13,76 @@ class _Screen2State extends State<Screen2> {
     return Scaffold(
       body: Column(
         children: [
-          Row(
-            children: [
-              Icon(Icons.info_sharp),
-              Text(
-                'Information',
-                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              ),
-              Row(
-                children: [
-                  Icon(Icons.notifications),
-                  Text(
-                    'Notifications',
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info_sharp),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Information',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ],
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(right: 40),
+                  child: Row(
+                    children: [
+                      Icon(Icons.notifications),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Notifications',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40,),
+          Container(
+            height: 235,
+            width: 320,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Color(0xffF3F3F3),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'NEAREST CAR',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: Color(0xff787878),
+                      ),
+                    ),
+                  ],
+                ),
+                
+              ],
+            ),
           ),
         ],
       ),
