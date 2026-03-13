@@ -14,7 +14,7 @@ class _Screen1State extends State<Screen1> {
       backgroundColor:Color(0xff2C2B34),
       body: Column(
         children: [
-        col
+        
         ],
       ),
     );
