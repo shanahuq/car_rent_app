@@ -1,4 +1,6 @@
 import 'package:car_rent_app/screen1.dart';
+import 'package:car_rent_app/screen2.dart';
+import 'package:car_rent_app/screen3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Screen1(),
+      home: const Screen3(),
     );
   }
 }
