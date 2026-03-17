@@ -62,31 +62,37 @@ class _Screen3State extends State<Screen3> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        height: 50,
-                        width: 110,
+                        // height: 50,
+                        // width: 110,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(16),
                           color: Colors.white,
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Fortuner GR',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 16,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Fortuner GR',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                ),
                               ),
-                            ),
-                            Text(
-                              '< 3km',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: Color(0xffB0B0B0),
+                              Text(
+                                '< 3km',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 12,
+                                  color: Color(0xffB0B0B0),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                       Padding(
@@ -122,6 +128,7 @@ class _Screen3State extends State<Screen3> {
 
   void showSheet(BuildContext context) {
     showModalBottomSheet(
+      isDismissible: false,
       context: context,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
@@ -151,17 +158,6 @@ class _Screen3State extends State<Screen3> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 320),
-                                child: GestureDetector(
-                                  onTap: () => Navigator.pop(context),
-                                  child: CircleAvatar(
-                                    radius: 10,
-                                    backgroundColor: Color(0xff45454B),
-                                    child: Icon(Icons.close,color: Colors.white,size: 16,),
-                                  ),
-                                ),
-                              ),
                               Text(
                                 'Fortuner GR',
                                 style: TextStyle(
@@ -382,11 +378,19 @@ class _Screen3State extends State<Screen3> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 30,left: 40),
+                          padding: const EdgeInsets.only(top: 30, left: 40),
                           child: Row(
                             children: [
                               Text(
-                                '\$${45.00}',
+                                '\$',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 34,
+                                  color: Color(0xff292D32),
+                                ),
+                              ),
+                              Text(
+                                '45.00',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 34,
@@ -402,7 +406,7 @@ class _Screen3State extends State<Screen3> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 50),
+                                padding: const EdgeInsets.only(left: 140),
                                 child: Container(
                                   height: 54,
                                   width: 147,
@@ -439,6 +443,18 @@ class _Screen3State extends State<Screen3> {
                 'assets/image 31.png',
                 height: 110,
                 width: 188,
+              ),
+            ),
+            Positioned(
+              top: 30,
+              right: 30,
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: CircleAvatar(
+                  radius: 10,
+                  backgroundColor: Color(0xff45454B),
+                  child: Icon(Icons.close, color: Colors.white, size: 16),
+                ),
               ),
             ),
           ],

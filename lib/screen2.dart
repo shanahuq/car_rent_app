@@ -23,7 +23,7 @@ class _Screen2State extends State<Screen2> {
                   padding: const EdgeInsets.only(left: 100),
                   child: Row(
                     children: [
-                      Icon(Icons.info_sharp),
+                      Icon(Icons.info_outline_rounded),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: Text(
@@ -42,7 +42,18 @@ class _Screen2State extends State<Screen2> {
                   padding: const EdgeInsets.only(right: 100),
                   child: Row(
                     children: [
-                      Icon(Icons.notifications),
+                      Stack(children: 
+                      [Icon(Icons.notifications_none),
+                      Positioned(
+                        right: 4,
+                        top: 4,
+                        child: CircleAvatar(
+                          radius: 4,
+                          backgroundColor: Colors.red,
+                        ),
+                      )
+                      ]
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: Text(
